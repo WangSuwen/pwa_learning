@@ -1,13 +1,13 @@
 {
-    "name": "一个PWA示例",
-    "short_name": "PWA示例",
+    "name": "一个小道童",
+    "short_name": "小道童",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#3eaf7c",
     "icons": [
       {
-        "src": "/youhun.jpg",
+        "src": "/daotong.jpeg",
         "sizes": "120x120",
         "type": "image/png"
       }
