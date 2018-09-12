@@ -8,8 +8,8 @@ app.use(express.static('src'));
 router.get('/', function(req, res) {
   res.send('index.html');
 });
-var server = app.listen(3000, function() {
-    console.log('listening 3000 ....');
+var server = app.listen(3100, function() {
+    console.log('listening 3100 ....');
 });
 // 这里把中间件导出，供app.js使用
 module.exports = router;
