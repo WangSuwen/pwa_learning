@@ -4,7 +4,7 @@
     "start_url": "/index.html",
     "display": "fullscreen",
     "background_color": "#fff",
-    "theme_color": "#3eaf7c",
+    "theme_color": "purple",
     "icons": [
       {
         "src": "/daotong.jpeg",
