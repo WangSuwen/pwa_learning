@@ -7,7 +7,7 @@
     "theme_color": "purple",
     "icons": [
       {
-        "src": "/daotong.jpeg",
+        "src": "/daotong.png",
         "sizes": "120x120",
         "type": "image/png"
       }

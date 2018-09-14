@@ -13,6 +13,7 @@
   <img src="./daotong.jpeg" style="width: 100%;" alt="小道童">
   <button style="border: 1px solid;border-radius: 5px;" onclick="notifyMe()">你点我呀!</button>
   <button style="border: 1px solid;border-radius: 5px;margin-top: 40px;" onclick="clickHandle()">你再点我试试！</button>
+  <button style="border: 1px solid;border-radius: 5px;margin-top: 40px;" id="hengfu">横幅来吧</button>
 </body>
 <script>
   // 检测浏览器是否支持SW
@@ -27,6 +28,29 @@
   }
 </script>
 <script>
+  var deferredPrompt = null;
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+      // 将事件返回存储起来
+      deferredPrompt = e;
+
+      // 取消默认事件
+      e.preventDefault();
+      return false;
+  });
+
+  document.getElementById('hengfu').addEventListener('click', function () {
+    if (deferredPrompt != null) {
+        // 异步触发横幅显示
+        deferredPrompt.prompt();
+        // 检测用户的安装行为
+        deferredPrompt.userChoice.then(function (choiceResult) {
+            alert('1---' + choiceResult.outcome);
+        });
+
+        deferredPrompt = null;
+    }
+  });
   function clickHandle() {
     alert('哎呀，真敢点我呀！');
   }
