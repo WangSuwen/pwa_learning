@@ -2,7 +2,7 @@
     "name": "一个小道童",
     "short_name": "小道童",
     "start_url": "/index.html",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#fff",
     "theme_color": "purple",
     "icons": [
