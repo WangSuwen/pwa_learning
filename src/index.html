@@ -12,6 +12,7 @@
   <h3>小 道童</h3>
   <img src="http://localhost:3100/daotong.jpeg" alt="小道童">
   <button style="border: 1px solid;border-radius: 5px;" onclick="notifyMe()">你点我呀!</button>
+  <button style="border: 1px solid;border-radius: 5px;" onclick="clickHandle()">你再点我试试！</button>
 </body>
 <script>
   // 检测浏览器是否支持SW
@@ -26,6 +27,9 @@
   }
 </script>
 <script>
+  function clickHandle() {
+    alert('哎呀，真敢点我呀！');
+  }
   function notifyMe() {
     // 先检查浏览器是否支持
     if (!("Notification" in window)) {
@@ -34,7 +38,7 @@
     // 检查用户是否同意接受通知
     else if (Notification.permission === "granted") {
       alert("用户接受通知");
-      var notification = new Notification("Hi there!");
+      var notification = new Notification("无量天尊!");
     }
 
     // 用户禁止，我们需要向用户获取权限 或处于 默认状态
@@ -44,7 +48,7 @@
         // 如果用户同意，就可以向他们发送通知
         alert("用户同意了申请");
         if (permission === "granted") {
-          var notification = new Notification("Hi there!");
+          var notification = new Notification("无量天尊!");
         }
       });
     }
