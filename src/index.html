@@ -31,16 +31,18 @@
     if (!("Notification" in window)) {
       alert("This browser does not support desktop notification");
     }
-    // 检查用户是否同意接受通知 或处于 默认状态
+    // 检查用户是否同意接受通知
     else if (Notification.permission === "granted") {
-      // If it's okay let's create a notification
+      alert("用户接受通知");
       var notification = new Notification("Hi there!");
     }
 
-    // 用户禁止，我们需要向用户获取权限
+    // 用户禁止，我们需要向用户获取权限 或处于 默认状态
     else if (Notification.permission === 'denied' || Notification.permission === "default") {
+      alert("用户拒绝接受通知或默认状态");
       Notification.requestPermission(function (permission) {
         // 如果用户同意，就可以向他们发送通知
+        alert("用户同意了申请");
         if (permission === "granted") {
           var notification = new Notification("Hi there!");
         }
